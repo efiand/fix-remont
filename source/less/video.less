@@ -1,0 +1,47 @@
+html > body > header > .video
+{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+
+	width: 50%;
+	max-width: 940px;
+
+	.background-image( header, jpg );
+	background-position: center top;
+
+	> button
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		.font-bigger;
+		text-align: center;
+		color: @coral;
+
+		transform: translate( -125px, -180px );
+
+
+		&::before
+		{
+			content: "";
+
+			position: static;
+			
+			display: block;
+			width: 254px;
+			height: 254px;
+			margin-bottom: 18px;
+
+			background-position: -50px -1621px;
+		}
+
+		&:hover::before,
+		&:focus::before
+		{
+			background-position: -50px -1975px;
+		}
+	}
+}

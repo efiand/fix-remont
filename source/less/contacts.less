@@ -1,0 +1,72 @@
+html > body > footer > .contacts
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	width: 984px;
+	padding: 0 50px;
+	margin: 75px auto 70px;
+
+	.font-bigger;
+
+	> li
+	{
+		> small
+		{
+			display: block;
+
+			font-size: @rem;
+			line-height: @rem * 1.5;
+			color: @gray;
+		}
+
+		> a
+		{
+			position: relative;
+			display: block;
+			margin: 8px 0 0 32px;
+			color: inherit;
+
+			&:hover,
+			&:focus
+			{
+				color: @coral;
+			}
+
+			&::before
+			{
+				content: "";
+
+				position: absolute;
+				top: 0;
+				left: -32px;
+
+				width: 25px;
+				height: 25px;
+
+				.icon;
+				background-position: -50px -1232px;
+			}
+
+			&.email
+			{
+				margin-top: 10px;
+
+				border-bottom: solid 2px @coral;
+
+				&::before
+				{
+					top: 3px;
+					left: -38px;
+
+					width: 31px;
+					height: 21px;
+
+					background-position: -50px -500px;
+				}
+			}
+		}
+	}
+}

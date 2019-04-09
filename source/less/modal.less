@@ -1,0 +1,42 @@
+html > body > main > .post > .modal
+{
+	position: fixed;
+	.xy-center;
+	z-index: 1;
+
+	display: none;
+	width: 975px;
+	min-height: 586px;
+	margin: 0;
+
+	background-color: #ffffff;
+	box-shadow: 0 0 0 10000px fade( @black, 60 );
+
+	animation: bounce 0.6s;
+
+	&.interactive
+	{
+		display: block;
+	}
+
+	> .lead
+	{
+		position: absolute;
+		.xy-center;
+		padding: 0;
+
+		text-align: center;
+
+		&::before
+		{
+			position: static;
+
+			display: block;
+			width: 214px;
+			height: 148px;
+			margin: 0 auto 20px;
+
+			background-position: -50px -984px;
+		}
+	}
+}

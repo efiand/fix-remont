@@ -1,0 +1,112 @@
+html > body > main > .slider
+{
+	> ul
+	{
+		position: relative;
+
+		height: @picture-height;
+
+		> li
+		{
+			position: absolute;
+
+			display: none;
+			margin-bottom: 0;
+
+			opacity: 0.6;
+
+			transition: left 0.6s ease-in-out, opacity 0.6s ease-in-out;
+
+			> figure
+			{
+				> figcaption
+				{
+					opacity: 0;
+
+					transition: opacity 0.6s ease-in-out;
+				}
+			}
+
+			&.current
+			{
+				left: 0;
+
+				display: block;
+
+				opacity: 1;
+
+				> figure
+				{
+					> figcaption
+					{
+						opacity: 1;
+					}
+				}
+			}
+
+			&.prev
+			{
+				left: -@picture-width - 165px;
+
+				display: block;
+			}
+
+			&.next
+			{
+				left: @picture-width + 235px;
+
+				display: block;
+			}
+
+			&.prev-prev
+			{
+				left: ( -@picture-width - 165px ) * 2;
+
+				display: block;
+			}
+
+			&.next-next
+			{
+				left: ( @picture-width + 235px ) * 2;
+
+				display: block;
+			}
+		}
+	}
+
+	> button
+	{
+		position: absolute;
+		bottom: 0;
+		width: 23px;
+		height: 45px;
+
+		.hidden-text;
+
+		.icon;
+		background-position: -50px -50px;
+
+		transition: none;
+
+		&:hover,
+		&:focus
+		{
+			background-position: -50px -190px;
+		}
+
+		&.prev
+		{
+			right: 125px;
+
+			display: block;
+		}
+
+		&.next
+		{
+			right: 75px;
+
+			display: block;
+			transform: rotate( 180deg );
+		}
+	}
+}

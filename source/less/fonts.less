@@ -1,0 +1,14 @@
+.font-face ( @family, @weight, @style, @filename )
+{
+	@font-face
+	{
+		font-weight: @weight;
+		font-style: @style;
+		font-family: @family;
+		font-display: swap;
+		src: url( "../fonts/@{filename}.woff" ) format( "woff" );
+	}
+}
+
+.font-face ( "Muller", @regular, normal, muller );
+.font-face ( "Muller", @medium, normal, muller-medium );

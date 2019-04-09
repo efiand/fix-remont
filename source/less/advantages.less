@@ -1,0 +1,55 @@
+html > body > main > .advantages
+{
+	> ul
+	{
+		display: flex;
+		flex-wrap: wrap;
+
+		> li
+		{
+			box-sizing: border-box;
+			width: 450px;
+			margin-bottom: 54px;
+			padding-bottom: 40px;
+
+			border-top: @border;
+
+			&:nth-child( odd )
+			{
+				margin-right: auto;
+			}
+
+			> h3
+			{
+				margin: 32px 0 8px;
+
+				font-weight: 500;
+				font-size: 24px;
+			}
+
+			> p
+			{
+				color: @gray;
+			}
+
+			&:last-child
+			{
+				text-align: center;
+
+				border: @border;
+
+				> h3
+				{
+					margin: 40px 0 0;
+				}
+
+				> b
+				{
+					font-weight: 500;
+					font-size: 64px;
+					line-height: 60px;
+				}
+			}
+		}
+	}
+}

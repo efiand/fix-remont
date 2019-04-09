@@ -1,0 +1,49 @@
+html > body > main > .photos
+{
+	position: relative;
+
+	margin-top: 40px;
+
+	> .lead
+	{
+		margin-bottom: @picture-height * 0.1;
+	}
+
+	> ul
+	{
+		> li
+		{
+			position: relative;
+
+			height: @picture-height;
+			margin-bottom: 30px;
+
+			> figure
+			{
+				margin: 0;
+				padding-left: 770px;
+
+				> figcaption
+				{
+					width: @picture-height * 0.3;
+
+					font-size: 13px;
+					line-height: 20px;
+					color: @gray;
+				}
+
+				img
+				{
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	> button
+	{
+		display: none;
+	}
+}
