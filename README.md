@@ -9,3 +9,7 @@
 Сборка с удалением временных файлов: `npm run build`
 
 Сборка и публикация: `npm run deploy`
+
+## Опубликованная версия
+
+https://efiand.github.io/fix-remont
